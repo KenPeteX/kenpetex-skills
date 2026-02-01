@@ -261,7 +261,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Base documentation (English & Chinese)
 - Version management framework
 
-## [0.1.0] - 2025-02-01
+## [0.1.0] - 2026-02-01
 
 ### Added
 - Initial release of Claude Skills framework
@@ -1549,7 +1549,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Skill installation/management script
 - Skill template for new skills
 
-## [0.1.0] - 2025-02-01
+## [0.1.0] - 2026-02-01
 
 ### Added
 - Initial release of Claude Skills framework
@@ -1625,8 +1625,8 @@ Expected structure:
 ├── VERSION
 ├── docs/
 │   └── plans/
-│       ├── 2025-02-01-claude-skills-framework-design.md
-│       └── 2025-02-01-claude-skills-framework-implementation.md
+│       ├── 2026-02-01-claude-skills-framework-design.md
+│       └── 2026-02-01-claude-skills-framework-implementation.md
 ├── scripts/
 │   ├── commit-helper.py
 │   ├── install.sh
