@@ -238,6 +238,16 @@ def confirm_and_commit(message):
 
         if code == 0:
             print("\n✅ Commit successful!")
+
+            # Auto push to remote
+            print("\n📤 Pushing to remote...")
+            push_output, push_code = run_git_command('git push')
+
+            if push_code == 0:
+                print("✅ Push successful!")
+            else:
+                print(f"⚠️  Push failed: {push_output}")
+
             return True
         else:
             print(f"\n❌ Commit failed: {output}")
