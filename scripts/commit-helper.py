@@ -218,8 +218,23 @@ def confirm_and_commit(message):
         # Stage all changes if not already staged
         run_git_command('git add -A')
 
-        # Commit
-        output, code = run_git_command(f'git commit -m "{message.replace(chr(10), "\\n")}"')
+        # Split message into lines for multi-line commit
+        lines = message.split('\n')
+        # Escape quotes and other special characters in commit message
+        escaped_lines = [line.replace('"', '\\"') for line in lines]
+
+        # Commit with multi-line message
+        if len(escaped_lines) == 1:
+            commit_cmd = f'git commit -m "{escaped_lines[0]}"'
+        else:
+            # First line is subject, rest is body
+            subject = escaped_lines[0]
+            body = escaped_lines[1:]
+            # Join body lines with newline characters for git
+            body_str = '\\n'.join(body)
+            commit_cmd = f'git commit -m "{subject}" -m "{body_str}"'
+
+        output, code = run_git_command(commit_cmd)
 
         if code == 0:
             print("\n✅ Commit successful!")

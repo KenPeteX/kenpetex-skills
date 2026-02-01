@@ -1,0 +1,8 @@
+{
+  "name": "kenpetex-skills",
+  "version": "0.1.1",
+  "description": "A curated collection of reusable Claude Code skills for enhancing development workflows.",
+  "author": "kenpetex",
+  "license": "MIT",
+  "plugins": []
+}
