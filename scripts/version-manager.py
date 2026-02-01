@@ -89,7 +89,7 @@ def get_skill_version(skill_name):
     return version_file.read_text().strip()
 
 
-def update_root_version(new_version):
+def update_root_version(skill_name, new_version):
     """Update root VERSION file."""
     version_file = Path(__file__).parent.parent / "VERSION"
     version_file.write_text(new_version + "\n")
