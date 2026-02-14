@@ -19,6 +19,7 @@ yarn.lock
 # Claude Code
 .claude/cache/
 .claude/tmp/
+.worktrees/
 
 # IDE
 .vscode/
